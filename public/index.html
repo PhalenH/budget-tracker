@@ -48,6 +48,7 @@
   <!-- registering the service worker file-->
   <script>
     if ("serviceWorker" in navigator) {
+      // before installing any service worker checks to make sure the page is fully loaded
       window.addEventListener("load", () => {
         navigator.serviceWorker.register("service-worker.js")
           .then(reg => {
