@@ -19,11 +19,29 @@ const DATA_CACHE_NAME = "data-cache-v1";
 self.addEventListener("install", function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log("Successfully pre-cached file");
-      // installs all the initial resources and put it in cache
+      console.log("Successfully pre-cached files");
+      // installs all the initial resources/static assets and put it in cache
       return cache.addAll(FILES_TO_CACHE);
     })
   );
   // tell the browser to activate this service worker immediately once it has finished installing
   self.skipWaiting();
+});
+
+//activate the service worker and remove old data from the cache.
+self.addEventListener("activate", function (evt) {
+  evt.waitUntil(
+    caches.keys().then((keyList) => {
+      return Promise.all(
+        keyList.map((key) => {
+          if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
+            console.log("Old cache removed", key);
+            return caches.delete(key);
+          }
+        })
+      );
+    })
+  );
+
+  self.clients.claim();
 });
