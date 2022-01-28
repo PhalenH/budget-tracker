@@ -2,7 +2,7 @@
 
 ## Deployed site
 
-<!-- https://workouttrackerphalen.herokuapp.com/ -->
+[Click here for Deployed Site](https://budget-buddy-2022.herokuapp.com/)
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@
 
 ## Description:
 
-The application is 
+The application allows a user to add expenses and deposits to their budget as well as take out costs with or without a connection. When entering transactions offline, they will populate the total as a user enters them in and will still be present when brought back online.
 
 ```
 GIVEN a user is on Budget App without an internet connection
