@@ -137,6 +137,8 @@ function sendTransaction(isAdding) {
     .catch((err) => {
       // fetch failed, so save in indexed db
       saveRecord(transaction);
+      // How does it get it from db.js file?
+      // because db.js is first in index scripts
 
       // clear form
       nameEl.value = "";

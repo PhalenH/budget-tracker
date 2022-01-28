@@ -5,6 +5,7 @@ const FILES_TO_CACHE = [
   "/",
   "/index.html",
   "/index.js",
+  "/db.js",
   "/styles.css",
   "/manifest.webmanifest",
   "/icons/icon-192x192.png",
@@ -12,7 +13,7 @@ const FILES_TO_CACHE = [
 ];
 
 // Prevent caches from using outdated cache (react manages this automatically)
-const CACHE_NAME = "static-cache-v1";
+const CACHE_NAME = "static-cache-v2";
 const DATA_CACHE_NAME = "data-cache-v1";
 
 // what is the event install, is that referencing service-worker?
@@ -72,16 +73,16 @@ self.addEventListener("fetch", function (event) {
         })
         .catch((err) => console.log(err))
     );
-    return
+    return;
   }
 
   // if we are offline or if we need something from the api but are still offline
   // this is the catch event
-  evt.respondWith(
+  event.respondWith(
     caches.open(CACHE_NAME).then((cache) => {
       // so if the request isn't in the response then it's fetched? does it get cached then?
-      return cache.match(evt.request).then((response) => {
-        return response || fetch(evt.request);
+      return cache.match(event.request).then((response) => {
+        return response || fetch(event.request);
       });
     })
   );
