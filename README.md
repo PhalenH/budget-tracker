@@ -1,8 +1,9 @@
 # Budget Tracker
 
 ## Deployed site
+- Check out the deployed site here!
 
-[Click here for Deployed Site](https://budget-buddy-2022.herokuapp.com/)
+https://budget-buddy-2022.herokuapp.com/
 
 ## Table of Contents
 
