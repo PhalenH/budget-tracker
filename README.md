@@ -37,10 +37,10 @@ The initial list of cache_files should include all static assets.
 - Open terminal and type ```npm install``` and ```npm start``` to start the server on their localhost.
 
 ## Contributing:
-
-There a no plans for public contribution at this time.
+- Worked using indexDB to allow offline functionality fo budget tracking. Used Service worker and web manifest to make the application a PWA. Utilized mongoDB and mongoose for model and data storage as well as api routes to interact with front end functionality.
+- There a no plans for public contribution at this time.
 
 ## Questions
 
-- If you have any questions, email me at pchaze@yahoo.com
+- If you have any questions, email me at phalenhazel@gmail.com
 - Checkout my GitHub profile [here](https://github.com/PhalenH)
