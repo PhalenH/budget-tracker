@@ -3,7 +3,10 @@
 ## Deployed site
 - Check out the deployed site here!
 
-https://budget-buddy-2022.herokuapp.com/
+### https://budget-buddy-2022.herokuapp.com/
+#
+![Screenshot of Landing page.](./assets/wep-page-screenshot.png)
+#
 
 ## Table of Contents
 
