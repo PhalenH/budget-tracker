@@ -7,6 +7,10 @@ button, input {
   font-size: 100%;
   font-family: Arial;
 }
+button:hover {
+  background-color: blueviolet;
+  color: white;
+}
 
 table {
   width: 100%;
@@ -16,7 +20,10 @@ td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  color: white;
+  background-color: black;
 }
+
 
 tr:nth-child(even) {
   background-color: #dddddd;
